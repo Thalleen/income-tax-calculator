@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import axios from "axios";
 import { Tooltip } from "react-tooltip";
 import debounce from "lodash.debounce";
-const BASE_URL = process.env.REACT_APP_API_URL;
+const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5001";
 
 const TaxForm = () => {
   const [income, setIncome] = useState(0);
