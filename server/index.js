@@ -6,11 +6,7 @@ const taxRoutes = require("./routes/taxRoutes");
 
 const app = express();
 
-app.use(cors({
-    origin: "https://income-tax-calculator-ir0c68mqp-thalleen-c-ns-projects.vercel.app", // Allow all origins (for testing)
-    methods: "GET,POST",
-    allowedHeaders: "Content-Type"
-  }));
+app.use(cors());
 app.use(express.json());
 app.use("/api/tax", taxRoutes);
 
