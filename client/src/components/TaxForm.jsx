@@ -1,9 +1,11 @@
+
 import React, { useState } from "react";
 import { Calculator, Coins, TrendingUp, HelpCircle, Sun, Moon } from "lucide-react";
 import { motion } from "framer-motion";
 import axios from "axios";
 import { Tooltip } from "react-tooltip";
 import debounce from "lodash.debounce";
+const BASE_URL = process.env.REACT_APP_API_URL;
 
 const TaxForm = () => {
   const [income, setIncome] = useState(0);
@@ -45,7 +47,7 @@ const TaxForm = () => {
     };
 
     try {
-        const response = await axios.post("http://localhost:5001/api/tax/calculate", {
+        const response = await axios.post(`${BASE_URL}/api/tax/calculate`, {
             income,
             deductions,  // Send structured deductions object
             taxRegime,
