@@ -7,7 +7,7 @@ const taxRoutes = require("./routes/taxRoutes");
 const app = express();
 
 app.use(cors({
-    origin: "https://vercel.com/thalleen-c-ns-projects/income-tax-calculator/FanMs49Pi4NA4D6LxhgLXsUw2opP", // Allow all origins (for testing)
+    origin: "https://income-tax-calculator-ir0c68mqp-thalleen-c-ns-projects.vercel.app", // Allow all origins (for testing)
     methods: "GET,POST",
     allowedHeaders: "Content-Type"
   }));
